@@ -1,0 +1,16 @@
+{% extends 'home.html'%} {% block content%}
+
+<div style="position:absolute;margin-top:30px;margin-left:25rem;background-color:white;width: 500px;border: 5px solid black;
+padding: 50px;">
+    <h1>
+        <ul>LOGIN</ul>
+    </h1>
+    <form action="" method="POST">
+        {% csrf_token%} {{form.as_p}}
+        <button type="submit" id="submit-btn">Sign In</button>
+    </form>
+    <div class="acc">
+        <p>Need an account?</p><a href="/register">Sign Up</a>
+    </div>
+</div>
+{% endblock %}

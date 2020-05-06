@@ -1,0 +1,18 @@
+{% extends 'home.html'%} {% block content%}
+
+<div style="max-width: 60rem;
+margin: auto;
+max-height: 600px;
+box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+padding: 3rem;
+margin-top: 50px;
+margin-bottom: 50px;">
+    <form action="" method="POST">
+        {% csrf_token%} {{form.as_p}}
+        <button type="submit" id="submit-btn">Sign Up</button>
+    </form>
+    <div class="acc">
+        <p>Already have an account?</p><a href="/login">Sign In</a>
+    </div>
+</div>
+{% endblock %}
